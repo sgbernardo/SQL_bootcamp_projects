@@ -1,0 +1,9 @@
+--Retrieve the stay, count_int,average_phq,average_scs, and average_as columns
+SELECT stay, COUNT(inter_dom) AS count_int, ROUND(AVG(todep),2) AS average_phq, ROUND(AVG(tosc),2) AS average_scs, ROUND(AVG(toas),2) AS average_as
+FROM students
+-- Filter only for international students
+WHERE inter_dom = 'Inter'
+-- Grouping by length of stay
+GROUP BY stay
+--Order by description and limit 
+ORDER BY stay DESC
