@@ -1,5 +1,5 @@
 # SQL Practice Projects
-This repository contains notes and codes in preparation for the SQL live interview. This will contain the code, the problem being solved, and insights. 
+This repository contains notes and codes in preparation for the SQL live interview. This will contain the code, and the output. 
 
 ## DataCamp Projects:
 **1. Analyzing International Debt Statistics (DataCamp_Student_Mental_Health)**
