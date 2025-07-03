@@ -42,12 +42,18 @@ This project examines the popularity of baby names from 1920 to 2020.
 
 **6. Impact Analysis of GoodThought NGO Initiatives (GoodThought_Impact_Analysis)** - Intermediate
 
-    DataCamp Link: https://www.datacamp.com/datalab/w/0141a769-0df3-4b49-9d81-a0206db32c0a/edit
+    https://www.datacamp.com/datalab/w/0141a769-0df3-4b49-9d81-a0206db32c0a/edit
 
-This project explores how data can be used to evaluate and drive positive change towards humanitarian efforts. In the Case of Good Thought, each humanitarian (labeled as assignments) are evaluated through impact score as well as donations received from donors. I also found the most impactful assignment per region.
+This project examines how data can be utilised to assess and drive positive change in humanitarian efforts. In the Case of Good Thought, each humanitarian (labeled as assignments) are evaluated through impact score as well as donations received from donors. I also identified the most impactful assignment for each region.
 
 **7. Factors that Fuel Student Performance (student_performance)** - Intermediate
 
-    DataCamp Link: https://www.datacamp.com/datalab/w/be25cc33-47d9-4cd1-8d7d-cb189a7fd143/edit
+    https://www.datacamp.com/datalab/w/be25cc33-47d9-4cd1-8d7d-cb189a7fd143/edit
 
-This project explores student performance data to determine the key drivers to success, which can lead to policy interventions to improve student outcomes. The first finding points out that students that engaged in extracurricular activities who studied the most obtained the highest average score. This was further substantiated by the second problem, where student who studied more than 16 hours weekly had the highest exam scores. Finally, I also provided the teacher with student exam rankings for her use. While the data says studying more hours lead to higher scores, further analysis should be done to determine the relationships between exam scores and other factors such as sleep, attendace, tutoring sessions, and teacher quality. Using the SQL data extracted, they can use techniques such as linear, logistic regression, or a combination of both to understand the drivers and policy interventions needed. 
+This project examines student performance data to identify the key drivers of success, which can inform policy interventions aimed at enhancing student outcomes. The first finding points out that students that engaged in extracurricular activities who studied the most obtained the highest average score. This was further substantiated by the second problem, where students who studied more than 16 hours weekly had the highest exam scores. Finally, I also provided the teacher with student exam rankings for her use. While the data suggests that studying more hours leads to higher scores, further analysis should be conducted to determine the relationships between exam scores and other factors, such as sleep, attendance, tutoring sessions, and teacher quality. Using the SQL data extracted, they can use techniques such as linear and logistic regression, or a combination of both, to understand the drivers and policy interventions needed. 
+
+**8. Analyzing Electric Vehicle Charging Habits (EV_Charging_Data)** - Intermediate
+
+    https://www.datacamp.com/datalab/w/22bf2713-2b46-4cb7-a22d-c09bb1dc536d/edit
+
+This project aims to analyze trends in EV usage such as the garage with the most number of customers, users who spend the most time charging in one session, and the most popular charging day/time. 
