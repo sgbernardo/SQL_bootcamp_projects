@@ -1,4 +1,4 @@
-# SQL_practice_sb
+# SQL Practice Projects
 This repository contains notes and codes in preparation for the SQL live interview. This will contain the code, the problem being solved, and insights. 
 
 ## DataCamp Projects:
