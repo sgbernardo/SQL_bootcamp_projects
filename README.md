@@ -38,3 +38,10 @@ This project examines data from the video gaming industry. The following finding
     DataCamp Link: https://www.datacamp.com/datalab/w/c8880bd1-961a-4c8f-b713-0853385091e0/edit
 
 This project examines the popularity of baby names from 1920 to 2020.
+
+
+**6. Impact Analysis of GoodThought NGO Initiatives (GoodThought_Impact_Analysis)** - Intermediate
+
+    DataCamp Link: https://www.datacamp.com/datalab/w/0141a769-0df3-4b49-9d81-a0206db32c0a/edit
+
+This project explores how data can be used to evaluate and drive positive change towards humanitarian efforts. In the Case of Good Thought, each humanitarian (labeled as assignments) are evaluated through impact score as well as donations received from donors. I also found the most impactful assignment per region.
