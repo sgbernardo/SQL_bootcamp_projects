@@ -1,0 +1,23 @@
+--1. Getting the data set avg_exam_score_by_study_and_extracurricular
+SELECT hours_studied, AVG(exam_score) AS avg_exam_score
+FROM student_performance
+WHERE hours_studied>10 AND extracurricular_activities='Yes'
+GROUP BY hours_studied
+ORDER by hours_studied DESC
+
+--2. Getting the average scores per hours studied range
+SELECT CASE WHEN hours_studied>=1 AND hours_studied <=5 THEN '1-5 hours'
+	WHEN hours_studied>=6 AND hours_studied <=10 THEN '6-10 hours'
+	WHEN hours_studied>=11 AND hours_studied <=15 THEN '11-15 hours'
+	ELSE '16+ hours' END AS hours_studied_range,
+	AVG(exam_score) AS avg_exam_score
+FROM student_performance
+GROUP BY hours_studied_range
+ORDER BY avg_exam_score DESC
+
+-- 3. Ranking all students without showing their exam scores
+SELECT attendance, hours_studied, sleep_hours, tutoring_sessions,
+	DENSE_RANK() OVER(ORDER BY exam_score DESC) AS exam_rank
+FROM public.student_performance
+ORDER BY exam_rank
+LIMIT 30
