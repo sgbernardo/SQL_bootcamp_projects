@@ -57,3 +57,10 @@ This project examines student performance data to identify the key drivers of su
     https://www.datacamp.com/datalab/w/22bf2713-2b46-4cb7-a22d-c09bb1dc536d/edit
 
 This project aims to analyze trends in EV usage such as the garage with the most number of customers, users who spend the most time charging in one session, and the most popular charging day/time. 
+
+**9. Uncovering the World's Oldest Businesses (worlds_oldest_business)** - Intermediate
+
+    https://www.datacamp.com/datalab/w/288cae27-d896-42d3-b8fe-bb789b6ebc9d/edit
+
+This project aims to look into the world's oldest businesses as well as uncover countries that lack data for oldest businesses. 
+
