@@ -24,11 +24,17 @@ This project examines international debt data collected by the World Bank, which
 
 This project examines carbon emissions of companies, where the dataset contains the industries the company is in and total carbon emissions for a given year. The result of this project shows that the materials industry, composing of 7 companies, make up for the highest carbon footprint in 2017.
 
-**4. When Was the Golden Era of Video Games?** - Beginner
+**4. When Was the Golden Era of Video Games? (video_games_golden_era)** - Beginner
 
     DataCamp Link: https://www.datacamp.com/datalab/w/b52d5d31-ea43-42fa-8655-b9c3c6a9f391/edit
 
 This project examines data from the video gaming industry. The following findings were noted:
 - Finding the top 10 video games: Wii Sport for Wii (2006) was the top-selling game in the data set, with sales of 82.9 million copies. It is worth noting that Nintendo published 7 out of 10 of the top 10 games. 
 - Finding the top 10 years with the highest critic scores: 1998 was the year when the highest critic scores of 9.32 were achieved, based on years with at least 4 games released for a fairer assessment.
-- Finding the top 10 years with the highest critic and user scores: 1998 was the year when both critics and users agreed in terms of scores (with a difference of only 0.08), indicating that the same year was the golden age for video games. 
+- Finding the top 10 years with the highest critic and user scores: 1998 was the year when both critics and users agreed in terms of scores (with a difference of only 0.08), indicating that the same year was the golden age for video games.
+
+**5. Exploring Trends in American Baby Names(american_baby_names)** - Beginner
+
+    DataCamp Link: https://www.datacamp.com/datalab/w/c8880bd1-961a-4c8f-b713-0853385091e0/edit
+
+This project examines the popularity of baby names from 1920 to 2020.
