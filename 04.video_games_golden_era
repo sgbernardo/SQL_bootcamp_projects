@@ -1,0 +1,22 @@
+-- Finding the top 10 best selling video games (best_selling_games)
+SELECT *
+FROM game_sales
+ORDER BY games_sold DESC
+LIMIT 10
+
+-- Finding the top 10 years with highest critic scores
+SELECT year, num_games, ROUND(avg_critic_score,2) AS avg_critic_score
+FROM public.critics_avg_year_rating
+WHERE num_games >= 4
+ORDER BY avg_critic_score DESC
+LIMIT 10
+
+-- Finding the golden year
+SELECT public.users_avg_year_rating.year, public.users_avg_year_rating.num_games, public.users_avg_year_rating.avg_user_score, public.critics_avg_year_rating.avg_critic_score, (public.users_avg_year_rating.avg_user_score-public.critics_avg_year_rating.avg_critic_score) AS diff
+FROM public.users_avg_year_rating
+INNER JOIN public.critics_avg_year_rating
+ON public.users_avg_year_rating.year = public.critics_avg_year_rating.year
+	AND public.users_avg_year_rating.num_games = public.critics_avg_year_rating.num_games
+WHERE public.users_avg_year_rating.avg_user_score >9 
+	OR public.critics_avg_year_rating.avg_critic_score >9
+ORDER BY public.users_avg_year_rating.year
