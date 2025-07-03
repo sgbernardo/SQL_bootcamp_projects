@@ -24,7 +24,7 @@ This project examines international debt data collected by the World Bank, which
 
 This project examines carbon emissions of companies, where the dataset contains the industries the company is in and total carbon emissions for a given year. The result of this project shows that the materials industry, composing of 7 companies, make up for the highest carbon footprint in 2017.
 
-**3. When Was the Golden Era of Video Games?** - Beginner
+**4. When Was the Golden Era of Video Games?** - Beginner
 
     DataCamp Link: https://www.datacamp.com/datalab/w/b52d5d31-ea43-42fa-8655-b9c3c6a9f391/edit
 
