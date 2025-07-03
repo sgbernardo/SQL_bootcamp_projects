@@ -1,0 +1,33 @@
+-- Use this table for the answer to question 1:
+SELECT first_name,
+    sum(num) AS sum,
+    CASE 
+        WHEN (SELECT COUNT(DISTINCT year) FROM baby_names b WHERE b.first_name = baby_names.first_name) >= 50 THEN 'Classic'
+        ELSE 'Trendy' 
+    END AS popularity_type
+FROM public.baby_names
+GROUP BY first_name
+ORDER BY first_name
+LIMIT 5;
+
+-- Finding the top 20 male baby names
+SELECT 
+	RANK() OVER(ORDER BY SUM(num) DESC) AS name_rank,
+	first_name,
+	SUM(num) AS sum
+FROM public.baby_names
+WHERE sex ='M'
+GROUP BY first_name
+ORDER BY name_rank
+LIMIT 20
+
+-- What were the top 20 male names overall, and how did the name Paul rank? 17th place
+
+-- Finding the female names that appeared from 1920 to 2020
+SELECT first_name, SUM(num) AS total_occurrences
+FROM public.baby_names
+WHERE sex ='F'
+GROUP BY first_name
+ORDER BY first_name
+LIMIT 20
+-- Which female names appeared in both 1920 and 2020?
