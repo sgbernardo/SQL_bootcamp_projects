@@ -1,0 +1,47 @@
+-- 1. Identifying the top five assignments based on total value of donations categorized by donor type highest_donation_assignments
+
+--- Declaring the CTE
+WITH cte AS (
+	SELECT public.donors.donor_type, public.donations.assignment_id, SUM(amount) AS total_amount
+	FROM public.donors
+	INNER JOIN public.donations
+	ON public.donations.donor_id = public.donors.donor_id
+	GROUP BY public.donors.donor_type, public.donations.assignment_id
+)
+
+--- Selecting data
+SELECT public.assignments.assignment_name, public.assignments.region, ROUND(cte.total_amount, 2) AS rounded_total_donation_amount, cte.donor_type
+FROM public.assignments
+
+--- Joining tables
+INNER JOIN cte 
+	ON public.assignments.assignment_id = cte.assignment_id
+ORDER BY rounded_total_donation_amount DESC
+LIMIT 5
+
+-- 2. -- Identifying the top assignments by impact in each region top_regional_impact_assignments
+
+-- Building the first CTE to calculate the total number of donations received for each assignment,
+WITH cte1 AS (
+	SELECT public.assignments.assignment_name, public.assignments.assignment_id, COUNT(public.donations.donation_id) AS num_total_donations
+	FROM public.assignments
+	INNER JOIN public.donations
+	ON public.assignments.assignment_id = public.donations.assignment_id
+	GROUP BY public.assignments.assignment_id
+),
+
+-- Building the second CTE to rank assignments within each region
+cte2 AS (
+	SELECT public.assignments.region, public.assignments.assignment_id, RANK() OVER
+	(PARTITION BY public.assignments.region
+	ORDER BY public.assignments.impact_score DESC) AS assignment_rank
+	FROM public.assignments
+)
+
+-- Main SQL Query
+SELECT a.assignment_name, a.region, a.impact_score, c1.num_total_donations
+FROM public.assignments a
+JOIN cte1 c1 ON a.assignment_id = c1.assignment_id
+JOIN cte2 c2 ON a.assignment_id = c2.assignment_id
+WHERE c2.assignment_rank = 1	
+ORDER BY a.region;
